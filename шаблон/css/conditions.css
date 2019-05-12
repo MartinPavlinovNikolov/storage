@@ -1,0 +1,26 @@
+body #main {
+  height: unset;
+}
+
+body #conditions {
+  background: #fff;
+  margin: 10rem auto;
+  border-radius: 15px;
+  padding: 5rem;
+  -webkit-box-shadow: 5px 5px 15px 5px #0B173C;
+  box-shadow: 5px 5px 15px 5px #0B173C;
+  border-radius: 15px;
+}
+
+body #conditions h3 {
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  body #conditions {
+    width: 90vw !important;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+}
+/*# sourceMappingURL=conditions.css.map */

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p,
+    h4 {
+        font-size: 16px;
+    }
+
+    body a {
+        color: white;
+    }
+
+
+    #headerTitle {
+        margin-top: 3rem;
+    }
+
+    #header {
+        background: rgb(194, 22, 90);
+        height: 15rem;
+        padding-top: 2rem;
+        text-align: center;
+
+        margin: 0;
+        background-image: url(../images/paper-colorful-color-loose-40799.jpeg);
+        background-repeat: no-repeat;
+        color: white;
+    }
+
+    p {
+        font-size: 1.0rem;
+    }
+
+    body,
+    html {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #background {
+        width: 1920px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: -100;
+    }
+
+    #main {
+        height: 80rem;
+
+        #navbar {
+            #startButton {
+                margin-left: 1.5rem;
+                margin-right: 0.5rem;
+            }
+
+            padding: 0;
+            background: rgb(83, 40, 120);
+
+            #dropdownMenuLink {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            a.dropdown-item:hover {
+                background: rgb(107, 90, 161);
+                color: white;
+            }
+
+            #searchButton {
+                background: rgb(0, 98, 204);
+                color: white;
+            }
+        }
+
+        #mainContainer {
+            padding-bottom: 4rem;
+
+            #centralHeader {
+                padding: 5rem;
+            }
+
+            text-align: left;
+            //-webkit-box-shadow: 5px 5px 15px 5px #0B173C;
+            //    box-shadow: 5px 5px 15px 5px #0B173C;//
+            border-radius: 15px;
+            width: 100%;
+            margin-top: 2rem;
+
+            h2,
+            h3,
+            h4 {
+                text-align: center;
+            }
+
+            #middleContainer {
+                padding-right: 37px;
+                padding-left: 16px;
+                margin-bottom: 4rem;
+            }
+        }
+
+        div.card {
+            -webkit-box-shadow: 2px 2px 5px 2px #0B173C;
+            box-shadow: 2px 2px 5px 2px #0B173C;
+            color: black;
+            margin-left: 1.8rem;
+        }
+
+        #footer {
+            text-align: left;
+            margin-top: 2rem;
+            padding: 3rem;
+            height: 16rem;
+            background: rgb(83, 40, 120);
+            color: white;
+
+            s h3,
+            p {
+                text-align: left;
+            }
+
+            a {
+                color:rgb(196, 224, 255);
+            }
+
+            a:hover {
+                color: darkblue;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            #thirthCol {
+                display: inline-flex;
+
+                li {
+                    margin-left: 2.5rem;
+                }
+            }
+        }
+
+        #gallery {
+            color: white;
+            margin-top: 5rem;
+            background: transparent;
+        }
+
+        #background {
+            opacity: 0.6;
+        }
+    }
+
+    .img__wrapper {
+
+
+        position: relative;
+        overflow: hidden;
+    }
+
+
+
+    .sold_out {
+        top: 2em;
+        left: -4em;
+        color: #fff;
+        display: block;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: .06em;
+        background-color: rgb(83, 40, 120);
+        padding: 0.5em 5em 0.4em 5em;
+        text-shadow: 0 0 0.75em #444;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+        font: bold 16px/1.2em Arial, Sans-Serif;
+        -webkit-text-shadow: 0 0 0.75em #444;
+        -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+        -webkit-transform: rotate(-45deg) scale(0.75, 1);
+        z-index: 10;
+        font-style: color white;
+    }
+
+    .sold_out:before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: -0.3em -5em;
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        border: 2px rgba(255, 255, 255, 0.7) dashed;
+    }
+
+    #mobilContainer {
+        display: none;
+    }
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media all and (min-width: 320px) and (max-width: 480px) {
+    body {
+        div.container {
+
+            background: transparent;
+        }
+
+        #navbar {
+            opacity: 1;
+
+            li.nav-link {
+                padding: unset;
+
+            }
+
+            li.nav-link:hover {
+                background: darkviolet;
+            }
+
+            .dropdown-menu {
+                width: 100%;
+            }
+
+            input {
+                margin-left: 2rem;
+            }
+
+            #searchButton:hover {
+                background: darkmagenta;
+
+            }
+
+
+
+            #navbarSupportedContent a {
+                width: 100%;
+                margin: 0;
+                height: 40px;
+
+
+                border-radius: unset;
+
+
+            }
+
+            #navbarSupportedContent a:hover {
+                background: darkmagenta;
+            }
+
+            i.fas fa-bars {
+                margin-left: 3rem;
+            }
+        }
+
+    }
+
+    body #main #navbar #startButton,
+    #dropdownMenuLink {
+        margin: 0;
+    }
+
+    body #main #mainContainer #centralHeader {
+        padding: 0rem;
+
+        div.container {
+            padding: 0;
+        }
+    }
+
+    body #main div.card {
+        margin-left: unset;
+        width: 17rem;
+    }
+
+    body #main #footer {
+        display: block;
+        height: 36rem;
+        padding: 20px;
+    }
+
+    #mainContainer {
+        display: none;
+    }
+
+    body #mobilContainer {
+        display: block;
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+
+    body #main #footer #thirthCol {
+        position: absolute;
+        left: -13px;
+    }
+
+    body #main #navbar #dropdownMenuLink {
+        margin-left: 0px;
+    }
+}

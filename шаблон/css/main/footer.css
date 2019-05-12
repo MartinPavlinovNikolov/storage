@@ -1,0 +1,87 @@
+#footer {
+  text-align: left;
+  margin: 2rem 0 0 0;
+  padding: 3rem;
+  background: var(--main-color);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer h3,
+#footer p {
+  text-align: left;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: var(--green-color);
+}
+
+#footer ul {
+  list-style-type: none;
+}
+
+#footer #thirthCol {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#footer #thirthCol li {
+  padding-right: 15px;
+}
+
+#footer #thirthCol li a:hover {
+  height: 5rem;
+  background: white;
+}
+#footer {
+  text-align: left;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+}
+
+#footer .btn-primary {
+  color: white;
+  background: var(--green-color);
+  border-color: unset;
+  font-size: 0.875rem;/*14px*/
+  margin-top: 0.5rem;
+}
+
+#footer .btn-primary:hover {
+  background: white;
+  color: var(--main-color);
+}
+
+#footer #firstBox {
+  padding: 2rem;
+}
+
+#footer #firstBox p {
+  height: 20px;
+}
+
+#footer #firstBox h3 {
+  text-align: left;
+}
+
+#footer #firstBox #thirthCol {
+  margin-top: 2rem;
+}
+
+#footer #secondBox {
+  margin-top: 2rem;
+}
+
+#footer #thirdBox {
+  margin-top: 2rem;
+}
+#footer #thirthCol li a:hover {
+  background: var(--main-color);
+  border-radius: 15px;
+}

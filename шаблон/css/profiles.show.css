@@ -1,0 +1,38 @@
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+}
+
+.star-rating .fa-star{color: yellow;}
+.star-rating .fa-star-no{color: #bbb;}
+
+#main {
+  height: 0rem !important;
+}
+#mainContainer {
+  display: block !important;
+  margin: 2rem auto !important;
+  width: 90vw !important;
+}
+.card-img-top {
+  height: 20vw;
+  width: 100%;
+  object-fit: scale-down; 
+}
+.img-thumbnail {
+  height: 20vw;
+  width: 100vw;
+  object-fit: scale-down;
+}
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0;
+    text-align: center;
+  }
+  .card {
+    margin: 1rem auto 0;
+  }
+  .card-img-top{
+    height: 50vw;
+  }
+}

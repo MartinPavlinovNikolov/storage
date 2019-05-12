@@ -1,0 +1,20 @@
+header {
+	margin-top: var(--nav-height);
+}
+
+body #headerTitle {
+  margin-top: 3rem;
+  color: var(--green-color);
+}
+
+body #header {
+  height: 435px;
+  padding-top: 2rem;
+  text-align: center;
+  margin: 0;
+  background-image: var(--header-background-image);
+  background-repeat: no-repeat;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center top;
+}

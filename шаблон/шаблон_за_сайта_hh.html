@@ -1,0 +1,238 @@
+<!--
+    Това е фаил-шаблон за писане на страници към сайта.
+    Сложил съм коментари да те ориентират.
+    Писането на новата манджа става от ред: 153.
+    Копирай този фаил в същата директория и работи в копието.
+    След Като си готова, прати ми архив на цялата папка "шаблон"
+    - Марто :)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="theme-color" content="#222222">
+
+    <title>Creativni.com</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../Fifoza Test Website/LoginForm/LoginRegistrationForm/css/animate-custom.css">
+    <script async type="text/javascript" src="./bubles/bubble-bg-master/background.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <link rel="stylesheet" href="./css/main/index.css">
+    <link rel="stylesheet" href="./css/main/nav.css">
+    <link rel="stylesheet" href="./css/main/header.css">
+    <link rel="stylesheet" href="./css/main/footer.css">
+    <!--Custom CSS-->
+    <!-- тук си слагаш линк за стиловете към съдържанието което ще пишеш. Замени "името_на_css_файла" с името на новият css фаил който ще казва какво става със съдържанието. -->
+    <link rel="stylesheet" type="text/css" href="./css/името_на_css_файла.css">
+
+</head>
+
+<body>
+
+    <div class="flexable-layout">
+        
+        <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+
+            <!-- Тук ти е перфектният nav -->
+            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" style="width: 100%"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation"><i class="fas fa-bars" style="margin-left: 3rem;"></i>
+                <span class="navbar-toggler-icon mr-3"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a href="/" class="btn active" role="button" aria-pressed="true" id="startButton">Начало</a>
+                <div class="dropdown show">
+                    <a class="btn dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Изберете изкуство
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Квилинг</a>
+                        <a class="dropdown-item" href="#">Плетени на Една кука</a>
+                        <a class="dropdown-item" href="#">Плетени на Две куки</a>
+                        <a class="dropdown-item" href="#">Живопис</a>
+                        <a class="dropdown-item" href="#">Декупаж</a>
+                        <a class="dropdown-item" href="#">Щамповани</a>
+                        <a class="dropdown-item" href="#">Дигитални</a>
+                        <a class="dropdown-item" href="#">Сувенири</a>
+                        <a class="dropdown-item" href="#">Други</a>
+                    </div>
+                </div>
+
+                <div class="dropdown show">
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Тематични артикули
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Рожден ден/Имен ден</a>
+                        <a class="dropdown-item" href="#">Сватба</a>
+                        <a class="dropdown-item" href="#">Изписване/Кръщене на дете</a>
+                        <a class="dropdown-item" href="#">Детски артикули/играчки</a>
+                        <a class="dropdown-item" href="#">Баба Марта</a>
+                        <a class="dropdown-item" href="#">Трифон Зарезан/Св. Валентин</a>
+                        <a class="dropdown-item" href="#">Хелоуин</a>
+                        <a class="dropdown-item" href="#">Коледа</a>
+                        <a class="dropdown-item" href="#">Други</a>
+                    </div>
+                </div>
+
+                <!-- Разкоментирай това и закомнетирай долното, ако искаш да стилизираш: когато потребителят е логнат. -->
+                <!-- Когато е логнат СТАРТ-->
+                <!-- <div class="dropdown show">
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      някакво име
+                    </a>
+                
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <a class="dropdown-item" href="#">Моят Профил</a>
+                        <a class="dropdown-item" href="#">Настройки</a>
+                        <a class="dropdown-item" href="#"
+                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        Изход
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="dropdown show mr-auto">
+                    <a href="#" class="btn">Качи нова творба</a>
+                </div> -->
+                <!-- Когато е логнат КРАЙ-->
+
+
+                <!-- Когато е не е логнат СТАРТ-->
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-link"><a href="#" class="btn  active" role="button"
+                          aria-pressed="true"><i class="fas fa-sign-in-alt mr-3"></i>Влезте
+                          в акаунта си</a></li>
+
+                    <li class="nav-link"><a href="#" class="btn  active" role="button"
+                          aria-pressed="true"><i class="fas fa-user-plus mr-3"></i>Регистрирайте се</a></li>
+                </ul>
+                <!-- Когато е не е логнат КРАЙ-->
+
+            </div>
+
+            <form class="form-inline row">
+                <input class="form-control ml-4 ml-md-auto mt-2 mb-2 mr-md-2 col-8" type="search" placeholder="Търсене..." aria-label="Search" name="search">
+                <button id="searchButton" class="btn btn-secondary ml-2 ml-md-0 mr-md-4" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <!-- Тук свършва перфектният нав -->
+        </nav>
+
+        <header id="header">
+            <!-- Тук ти е перфектният хедър -->
+            <div class="" width="100%" id="headerTitle">
+                <h1>Creativni.com</h1>
+                <h2>Най-голямата платформа в България</h2>
+                <h3>за творци на ръчно изработени продукти</h3>
+            </div>
+            <!-- Тук приключва перфектният хедър -->
+        </header>
+
+        <main id="main" class="flex1">
+            <!-- Ей тука пишеш нужното за тази страница -->
+            
+            <!-- Тук приключва писането по страницата -->
+        </main>
+
+        <footer id="footer">
+            <!-- Тук започва перфектният футър -->
+            <div class="col" id="firstBox">
+                <h3>Контакти</h3>
+                <p><i class="fas fa-mobile-alt m-2"></i><a href="tel:+359878738040">+359878738040</a></p>
+                <p><i class="fas fa-envelope-square m-2"></i><a href="mailto:info@creativni.com">Email: info@creativni.com</a></i></p>
+                <p><i class="fas fa-envelope-square m-2"></i><a href="mailto:team@creativni.com">Email: team@creativni.com</a></i></p>
+                <ul id="thirthCol">
+                    <li>
+                        <p><a href="https://www.facebook.com/groups/691947731220270/?tn-str=*F" target="_blanc"><img
+                                    border=" 0" alt="facebook" src="./images/Green_Facebook.png" width="45" height="45"></a>
+                        </p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.pinterest.com/eb0cbd3ecf81451962746acda9cad4/" target="_blanc"><img
+                                    border=" 0" alt="Pinterest" src="./images/Green_Pinterest.png" width="45"
+                                    height="45"></a>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p><a href="https://twitter.com/Creativni1?lang=en" target="_blanc"><img border=" 0"
+                                    alt="tweeter" src="./images/Twitter_Green.png" width="45" height="45"></a></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col" id="secondBox">
+                <ul>
+                    <li> <a href="#">Квилинг</a></li>
+                    <li> <a href="#">Плетени на Една кука</a></li>
+                    <li> <a href="#">Плетени на Две куки</a></li>
+                    <li><a href="#">Живопис</a> /
+                        <a href="#">Декупаж</a></li>
+                    <li> <a href="#">Щамповани</a></li>
+                    <li><a href="#">Дигитални</a></li>
+                    <li><a href="#">Други</a></li>
+                </ul>
+            </div>
+
+            <div class="col" id="thirdBox">
+                <p><a href="#">Нашата мисия</a></p>
+                <p><a href="#">Нашият екип</a></p>
+
+                <p><a href="#">Общи правила за ползване на сайта</a></p>
+            </div>
+
+            <div class="col" id="form">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Вашият Имейл</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Вашето съобщение</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input class="btn btn-primary" type="submit" value="Изпратете">
+                    </div>
+                </form>
+            </div>
+            <!-- Тук приключва перфектният футър -->
+        </footer>
+
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Тук реферираш нужните javascript за тази страница, ако изобщо има нужда. Замени "името_на_скрипта" с името на новосъздаденият от теб скрипт. Ako са повече скриптове, добавяй ги пак тука. -->
+    <script src="./js/името_на_скрипта.js"></script>
+    <!-- Тук приключват нужните javascript за тази страница -->
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+:root {
+  --main-color: #092514;
+  --green-color: #6dbf1c;
+  --rem: 16px;
+  --nav-height: 3.25rem;
+  --header-background-image: url(../../images/Creativni-1520.jpg);
+  --main-background-image: url(../../images/Background-new6.jpg);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body h2 {
+  font-size: 1.125rem;/*18px*/
+}
+
+body h3 {
+  font-size: var(--rem);
+}
+
+body p,
+body p.lead,
+body h4 {
+  font-size: 1rem;
+}
+
+body h5 {
+  font-size: 1rem;
+}
+
+body a {
+  color: var(--green-color);
+}
+
+body p {
+  font-size: 0.9rem;
+}
+
+body #background {
+  width: 1920px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -100;
+}
+
+body #main {
+  background-image: var(--main-background-image);
+}
+
+body .flexable-layout a.btn {
+  background-color: white;
+  border-color: white;
+}
+
+body .flexable-layout a.btn:hover {
+  color: var(--main-color);
+  background-color: var(--green-color);
+}
+
+body a:hover {
+  color: white;
+  border-color: white;
+}
+.btn {
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.flexable-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.main-background-color {
+  background-color: var(--main-color);
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1109px) {
+}
