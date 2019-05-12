@@ -58,13 +58,14 @@ body #main {
 }
 
 body .flexable-layout a.btn {
-  background-color: white;
+  background-color: var(--main-color);
   border-color: white;
 }
 
 body .flexable-layout a.btn:hover {
-  color: var(--main-color);
-  background-color: var(--green-color);
+  color: var(--green-color);
+  background-color: white;
+  border-color: var(--main-color);
 }
 
 body a:hover {
