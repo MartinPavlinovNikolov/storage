@@ -7,7 +7,7 @@
 #navbar #startButton {
   margin-left: 1.5rem;
   margin-right: 0.6rem;
-  font-size: 0.9rem;
+  font-size: .95vw;
 }
 
 #navbar #dropdownMenuLink {
@@ -27,12 +27,14 @@
 #navbar a {
   color: var(--main-color);
   background-color: white;
-  font-size: 0.9rem;
+  font-size: 1vw;
+  max-height: 3.2vw;
 }
 
 #navbar a:hover {
   background: var(--main-color);
   color: white;
+  border-color: white;
 }
 
 #navbar a.dropdown-item:hover {
@@ -48,4 +50,12 @@
 #navbar #searchButton:hover {
   color: white;
   background: var(--main-color);
+}
+button.navbar-toggler {
+  width: 100%;
+}
+
+#searchInput, #searchButton {
+  font-size: .95vw;
+  max-height: 3.2vw;
 }

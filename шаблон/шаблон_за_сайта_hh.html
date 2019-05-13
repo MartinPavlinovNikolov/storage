@@ -31,10 +31,11 @@
     <link rel="stylesheet" href="./css/main/index.css">
     <link rel="stylesheet" href="./css/main/nav.css">
     <link rel="stylesheet" href="./css/main/header.css">
-    <link rel="stylesheet" href="./css/main/footer.css">
     <!--Custom CSS-->
     <!-- тук си слагаш линк за стиловете към съдържанието което ще пишеш. Замени "името_на_css_файла" с името на новият css фаил който ще казва какво става със съдържанието. -->
     <link rel="stylesheet" type="text/css" href="./css/името_на_css_файла.css">
+    
+    <link rel="stylesheet" href="./css/main/footer.css">
 
 </head>
 
@@ -118,18 +119,17 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-link"><a href="#" class="btn  active" role="button"
-                          aria-pressed="true"><i class="fas fa-sign-in-alt mr-3"></i>Влезте
-                          в акаунта си</a></li>
+                          aria-pressed="true"><i class="fas fa-sign-in-alt mr-3"></i>Вход</a></li>
 
                     <li class="nav-link"><a href="#" class="btn  active" role="button"
-                          aria-pressed="true"><i class="fas fa-user-plus mr-3"></i>Регистрирайте се</a></li>
+                          aria-pressed="true"><i class="fas fa-user-plus mr-3"></i>Регистрация</a></li>
                 </ul>
                 <!-- Когато е не е логнат КРАЙ-->
 
             </div>
 
             <form class="form-inline row">
-                <input class="form-control ml-4 ml-md-auto mt-2 mb-2 mr-md-2 col-8" type="search" placeholder="Търсене..." aria-label="Search" name="search">
+                <input id="searchInput" class="form-control ml-4 ml-md-auto mt-2 mb-2 mr-md-2 col-8" type="search" placeholder="Търсене..." aria-label="Search" name="search">
                 <button id="searchButton" class="btn btn-secondary ml-2 ml-md-0 mr-md-4" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
