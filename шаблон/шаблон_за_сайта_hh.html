@@ -1,7 +1,7 @@
 <!--
     Това е фаил-шаблон за писане на страници към сайта.
     Сложил съм коментари да те ориентират.
-    Писането на новата манджа става от ред: 153.
+    Писането на новата манджа става от ред: 160.
     Копирай този фаил в същата директория и работи в копието.
     След Като си готова, прати ми архив на цялата папка "шаблон"
     - Марто :)
@@ -43,109 +43,117 @@
 
     <div class="flexable-layout">
         
-        <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+        <!-- Тук ти е перфектният nav -->
+        <nav id="navbar">
+            <input type="checkbox" id="hamburger-button">
+            <label id="hamburger" for="hamburger-button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <ul>
+                <li>
+                    <a href="/" class="btn" role="button" aria-pressed="true">Начало</a>
+                </li>
 
-            <!-- Тук ти е перфектният nav -->
-            <button class="navbar-toggler text-white" type="button" data-toggle="collapse" style="width: 100%"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation"><i class="fas fa-bars" style="margin-left: 3rem;"></i>
-                <span class="navbar-toggler-icon mr-3"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <a href="/" class="btn active" role="button" aria-pressed="true" id="startButton">Начало</a>
-                <div class="dropdown show">
-                    <a class="btn dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      Изберете изкуство
-                    </a>
+                <li>
+                    <button class="btn hh-dropdown">
+                        Изберете изкуство
+                        <i class="fa fa-caret-down"></i>
+                        <div class="hh-dropdown-content">
+                            <a href="#">Квилинг</a>
+                            <a href="#">Плетени на Една кука</a>
+                            <a href="#">Плетени на Две куки</a>
+                            <a href="#">Живопис</a>
+                            <a href="#">Декупаж</a>
+                            <a href="#">Щамповани</a>
+                            <a href="#">Дигитални</a>
+                            <a href="#">Сувенири</a>
+                            <a href="#">Други</a>
+                        </div>
+                    </button>
+                </li>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Квилинг</a>
-                        <a class="dropdown-item" href="#">Плетени на Една кука</a>
-                        <a class="dropdown-item" href="#">Плетени на Две куки</a>
-                        <a class="dropdown-item" href="#">Живопис</a>
-                        <a class="dropdown-item" href="#">Декупаж</a>
-                        <a class="dropdown-item" href="#">Щамповани</a>
-                        <a class="dropdown-item" href="#">Дигитални</a>
-                        <a class="dropdown-item" href="#">Сувенири</a>
-                        <a class="dropdown-item" href="#">Други</a>
-                    </div>
-                </div>
-
-                <div class="dropdown show">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li>
+                    <button class="btn hh-dropdown">
                         Тематични артикули
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Рожден ден/Имен ден</a>
-                        <a class="dropdown-item" href="#">Сватба</a>
-                        <a class="dropdown-item" href="#">Изписване/Кръщене на дете</a>
-                        <a class="dropdown-item" href="#">Детски артикули/играчки</a>
-                        <a class="dropdown-item" href="#">Баба Марта</a>
-                        <a class="dropdown-item" href="#">Трифон Зарезан/Св. Валентин</a>
-                        <a class="dropdown-item" href="#">Хелоуин</a>
-                        <a class="dropdown-item" href="#">Коледа</a>
-                        <a class="dropdown-item" href="#">Други</a>
-                    </div>
-                </div>
+                        <i class="fa fa-caret-down"></i>
+                        <div class="hh-dropdown-content">
+                            <a href="#">Рожден ден/Имен ден</a>
+                            <a href="#">Сватба</a>
+                            <a href="#">Изписване/Кръщене на дете</a>
+                            <a href="#">Детски артикули/играчки</a>
+                            <a href="#">Баба Марта</a>
+                            <a href="#">Трифон Зарезан/Св. Валентин</a>
+                            <a href="#">Хелоуин</a>
+                            <a href="#">Коледа</a>
+                            <a href="#">Други</a>
+                        </div>
+                    </button>
+                </li>
 
                 <!-- Разкоментирай това и закомнетирай долното, ако искаш да стилизираш: когато потребителят е логнат. -->
                 <!-- Когато е логнат СТАРТ-->
-                <!-- <div class="dropdown show">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      някакво име
-                    </a>
+                <!-- 
+                <li>
+                    <button class="btn hh-dropdown">Някакво име
+                        <i class="fa fa-caret-down"></i>
+                        <div class="hh-dropdown-content">
+                            <a href="#">Моят Профил</a>
+                            <a href="#">Настройки</a>
+                        </div>
+                    </button>
+                </li>
+
+                <li>
+                    <a class="btn" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Изход</a>
+                    <form id="logout-form" action="#" method="POST" style="display: none;">
+                        
+                    </form>
+                </li>
                 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                        <a class="dropdown-item" href="#">Моят Профил</a>
-                        <a class="dropdown-item" href="#">Настройки</a>
-                        <a class="dropdown-item" href="#"
-                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        Изход
-                        </a>
+                <li>
+                    <div>
+                        <a class="btn" href="#">Качи нова творба</a>
                     </div>
-                </div>
-                
-                <div class="dropdown show mr-auto">
-                    <a href="#" class="btn">Качи нова творба</a>
-                </div> -->
+                </li>    
+                -->
                 <!-- Когато е логнат КРАЙ-->
 
 
-                <!-- Когато е не е логнат СТАРТ-->
-                <ul class="navbar-nav mr-auto">
+                <!-- Когато не е логнат СТАРТ-->
+                <li>
+                    <a class="btn" href="#" role="button"><i class="fas fa-sign-in-alt"></i>
+                    Вход</a>
+                </li>
 
-                    <li class="nav-link"><a href="#" class="btn  active" role="button"
-                          aria-pressed="true"><i class="fas fa-sign-in-alt mr-3"></i>Вход</a></li>
+                <li>
+                    <a class="btn" href="#" role="button"><i class="fas fa-user-plus"></i>
+                    Регистрация</a>
+                </li>
+                <!-- Когато не е логнат КРАЙ-->
 
-                    <li class="nav-link"><a href="#" class="btn  active" role="button"
-                          aria-pressed="true"><i class="fas fa-user-plus mr-3"></i>Регистрация</a></li>
-                </ul>
-                <!-- Когато е не е логнат КРАЙ-->
-
-            </div>
-
-            <form class="form-inline row">
-                <input id="searchInput" class="form-control ml-4 ml-md-auto mt-2 mb-2 mr-md-2 col-8" type="search" placeholder="Търсене..." aria-label="Search" name="search">
-                <button id="searchButton" class="btn btn-secondary ml-2 ml-md-0 mr-md-4" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-            <!-- Тук свършва перфектният нав -->
+                <li>
+                    <form class="form-inline">
+                        <input id="searchInput" class="form-control" type="search" placeholder="Търсене..." name="search">
+                        <button id="searchButton" class="btn btn-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
         </nav>
+        <!-- Тук свършва перфектният нав -->
 
+        <!-- Тук ти е перфектният хедър -->
         <header id="header">
-            <!-- Тук ти е перфектният хедър -->
             <div class="" width="100%" id="headerTitle">
                 <h1>Creativni.com</h1>
                 <h2>Най-голямата платформа в България</h2>
                 <h3>за творци на ръчно изработени продукти</h3>
             </div>
-            <!-- Тук приключва перфектният хедър -->
         </header>
+        <!-- Тук приключва перфектният хедър -->
 
         <main id="main" class="flex1">
             <!-- Ей тука пишеш нужното за тази страница -->
@@ -153,8 +161,8 @@
             <!-- Тук приключва писането по страницата -->
         </main>
 
+        <!-- Тук започва перфектният футър -->
         <footer id="footer">
-            <!-- Тук започва перфектният футър -->
             <div class="col" id="firstBox">
                 <h3>Контакти</h3>
                 <p><i class="fas fa-mobile-alt m-2"></i><a href="tel:+359878738040">+359878738040</a></p>
@@ -215,8 +223,8 @@
                     </div>
                 </form>
             </div>
-            <!-- Тук приключва перфектният футър -->
         </footer>
+        <!-- Тук приключва перфектният футър -->
 
     </div>
 

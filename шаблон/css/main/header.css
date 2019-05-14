@@ -2,12 +2,12 @@ header {
 	margin-top: var(--nav-height);
 }
 
-body #headerTitle {
+#headerTitle {
   margin-top: 3rem;
   color: var(--green-color);
 }
 
-body #header {
+#header {
   height: 435px;
   padding-top: 2rem;
   text-align: center;
@@ -17,4 +17,19 @@ body #header {
   color: white;
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+@media only screen and (max-width: 991px) {
+  #header {
+    max-height: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    max-height: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
 }
