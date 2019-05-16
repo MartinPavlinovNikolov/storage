@@ -1,7 +1,7 @@
 <!--
     Това е фаил-шаблон за писане на страници към сайта.
     Сложил съм коментари да те ориентират.
-    Писането на новата манджа става от ред: 160.
+    Писането на новата манджа става от ред: 157.
     Копирай този фаил в същата директория и работи в копието.
     След Като си готова, прати ми архив на цялата папка "шаблон"
     - Марто :)
@@ -22,12 +22,11 @@
     <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="../Fifoza Test Website/LoginForm/LoginRegistrationForm/css/animate-custom.css">
-    <script async type="text/javascript" src="./bubles/bubble-bg-master/background.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
+    <link rel="stylesheet" href="./css/mi.css">
     <link rel="stylesheet" href="./css/main/index.css">
     <link rel="stylesheet" href="./css/main/nav.css">
     <link rel="stylesheet" href="./css/main/header.css">
@@ -44,7 +43,7 @@
     <div class="flexable-layout">
         
         <!-- Тук ти е перфектният nav -->
-        <nav id="navbar">
+        <nav class="mi-navbar">
             <input type="checkbox" id="hamburger-button">
             <label id="hamburger" for="hamburger-button">
                 <div></div>
@@ -53,14 +52,14 @@
             </label>
             <ul>
                 <li>
-                    <a href="/" class="btn" role="button" aria-pressed="true">Начало</a>
+                    <a href="/" class="mi-btn-nav" role="button">Начало</a>
                 </li>
 
                 <li>
-                    <button class="btn hh-dropdown">
+                    <button class="mi-dropdown-nav">
                         Изберете изкуство
                         <i class="fa fa-caret-down"></i>
-                        <div class="hh-dropdown-content">
+                        <div class="mi-dropdown-content-nav">
                             <a href="#">Квилинг</a>
                             <a href="#">Плетени на Една кука</a>
                             <a href="#">Плетени на Две куки</a>
@@ -75,10 +74,10 @@
                 </li>
 
                 <li>
-                    <button class="btn hh-dropdown">
+                    <button class="mi-dropdown-nav">
                         Тематични артикули
                         <i class="fa fa-caret-down"></i>
-                        <div class="hh-dropdown-content">
+                        <div class="mi-dropdown-content-nav">
                             <a href="#">Рожден ден/Имен ден</a>
                             <a href="#">Сватба</a>
                             <a href="#">Изписване/Кръщене на дете</a>
@@ -96,9 +95,9 @@
                 <!-- Когато е логнат СТАРТ-->
                 <!-- 
                 <li>
-                    <button class="btn hh-dropdown">Някакво име
+                    <button class="mi-dropdown-nav">Примерно име
                         <i class="fa fa-caret-down"></i>
-                        <div class="hh-dropdown-content">
+                        <div class="mi-dropdown-content-nav">
                             <a href="#">Моят Профил</a>
                             <a href="#">Настройки</a>
                         </div>
@@ -106,15 +105,15 @@
                 </li>
 
                 <li>
-                    <a class="btn" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Изход</a>
+                    <a class="mi-btn-nav" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Изход</a>
                     <form id="logout-form" action="#" method="POST" style="display: none;">
-                        
+                        @csrf
                     </form>
                 </li>
                 
                 <li>
                     <div>
-                        <a class="btn" href="#">Качи нова творба</a>
+                        <a class="mi-btn-nav" href="#">Качи нова творба</a>
                     </div>
                 </li>    
                 -->
@@ -123,21 +122,21 @@
 
                 <!-- Когато не е логнат СТАРТ-->
                 <li>
-                    <a class="btn" href="#" role="button"><i class="fas fa-sign-in-alt"></i>
+                    <a class="mi-btn-nav" href="{{ route('login') }}" role="button"><i class="fas fa-sign-in-alt"></i>
                     Вход</a>
                 </li>
 
                 <li>
-                    <a class="btn" href="#" role="button"><i class="fas fa-user-plus"></i>
+                    <a class="mi-btn-nav" href="{{ route('register') }}" role="button"><i class="fas fa-user-plus"></i>
                     Регистрация</a>
                 </li>
                 <!-- Когато не е логнат КРАЙ-->
 
                 <li>
-                    <form class="form-inline">
-                        <input id="searchInput" class="form-control" type="search" placeholder="Търсене..." name="search">
-                        <button id="searchButton" class="btn btn-secondary" type="submit">
-                            <i class="fa fa-search"></i>
+                    <form>
+                        <input class="mi-search-input-nav" type="search" placeholder="Търсене..." name="search">
+                        <button class="mi-search-button-nav" type="submit">
+                            <span>&#x2315;</span>
                         </button>
                     </form>
                 </li>
@@ -146,18 +145,16 @@
         <!-- Тук свършва перфектният нав -->
 
         <!-- Тук ти е перфектният хедър -->
-        <header id="header">
-            <div class="" width="100%" id="headerTitle">
-                <h1>Creativni.com</h1>
-                <h2>Най-голямата платформа в България</h2>
-                <h3>за творци на ръчно изработени продукти</h3>
-            </div>
+        <header class="mi-header">
+            <h1>Creativni.com</h1>
+            <h2>Най-голямата платформа в България</h2>
+            <h3>за творци на ръчно изработени продукти</h3>
         </header>
         <!-- Тук приключва перфектният хедър -->
 
         <main id="main" class="flex1">
             <!-- Ей тука пишеш нужното за тази страница -->
-            
+            Съдаржание...
             <!-- Тук приключва писането по страницата -->
         </main>
 
@@ -170,20 +167,16 @@
                 <p><i class="fas fa-envelope-square m-2"></i><a href="mailto:team@creativni.com">Email: team@creativni.com</a></i></p>
                 <ul id="thirthCol">
                     <li>
-                        <p><a href="https://www.facebook.com/groups/691947731220270/?tn-str=*F" target="_blanc"><img
-                                    border=" 0" alt="facebook" src="./images/Green_Facebook.png" width="45" height="45"></a>
+                        <p><a href="https://www.facebook.com/groups/691947731220270/?tn-str=*F" target="_blanc"><img border=" 0" alt="facebook" src="images/Green_Facebook.png" width="45" height="45"></a>
                         </p>
                     </li>
                     <li>
-                        <p><a href="https://www.pinterest.com/eb0cbd3ecf81451962746acda9cad4/" target="_blanc"><img
-                                    border=" 0" alt="Pinterest" src="./images/Green_Pinterest.png" width="45"
-                                    height="45"></a>
+                        <p><a href="https://www.pinterest.com/eb0cbd3ecf81451962746acda9cad4/" target="_blanc"><img border=" 0" alt="Pinterest" src="images/Green_Pinterest.png" width="45" height="45"></a>
                         </p>
                     </li>
 
                     <li>
-                        <p><a href="https://twitter.com/Creativni1?lang=en" target="_blanc"><img border=" 0"
-                                    alt="tweeter" src="./images/Twitter_Green.png" width="45" height="45"></a></p>
+                        <p><a href="https://twitter.com/Creativni1?lang=en" target="_blanc"><img border=" 0" alt="tweeter" src="images/Twitter_Green.png" width="45" height="45"></a></p>
                     </li>
                 </ul>
             </div>
@@ -193,8 +186,8 @@
                     <li> <a href="#">Квилинг</a></li>
                     <li> <a href="#">Плетени на Една кука</a></li>
                     <li> <a href="#">Плетени на Две куки</a></li>
-                    <li><a href="#">Живопис</a> /
-                        <a href="#">Декупаж</a></li>
+                    <li><a href="#">Живопис</a></li>
+                    <li><a href="#">Декупаж</a></li>
                     <li> <a href="#">Щамповани</a></li>
                     <li><a href="#">Дигитални</a></li>
                     <li><a href="#">Други</a></li>
@@ -219,7 +212,7 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Вашето съобщение</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <input class="btn btn-primary" type="submit" value="Изпратете">
+                        <input class="mi-btn-nav" type="submit" value="Изпратете">
                     </div>
                 </form>
             </div>
