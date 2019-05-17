@@ -16,20 +16,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
-    <meta name="theme-color" content="#222222">
 
     <title>Creativni.com</title>
-    <link rel="stylesheet" href="./css/bootstrap-grid.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+    <!-- ако закоментираш този линк навигацията, футъра и хедъра ще са си пак тип топ. Изобщо не ни е нужен. Ти като си разработваш, ползвай си го ако ти е по-лесно с него -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/mi.css">
     <link rel="stylesheet" href="./css/main/index.css">
     <link rel="stylesheet" href="./css/main/nav.css">
     <link rel="stylesheet" href="./css/main/header.css">
+    
     <!--Custom CSS-->
     <!-- тук си слагаш линк за стиловете към съдържанието което ще пишеш. Замени "името_на_css_файла" с името на новият css фаил който ще казва какво става със съдържанието. -->
     <link rel="stylesheet" type="text/css" href="./css/името_на_css_файла.css">
@@ -40,7 +39,7 @@
 
 <body>
 
-    <div class="flexable-layout">
+    <div class="mi-layout">
         
         <!-- Тук ти е перфектният nav -->
         <nav class="mi-navbar">
@@ -92,7 +91,9 @@
                 </li>
 
                 <!-- Разкоментирай това и закомнетирай долното, ако искаш да стилизираш: когато потребителят е логнат. -->
+
                 <!-- Когато е логнат СТАРТ-->
+
                 <!-- 
                 <li>
                     <button class="mi-dropdown-nav">Примерно име
@@ -115,21 +116,24 @@
                     <div>
                         <a class="mi-btn-nav" href="#">Качи нова творба</a>
                     </div>
-                </li>    
+                </li>
                 -->
+
                 <!-- Когато е логнат КРАЙ-->
 
 
                 <!-- Когато не е логнат СТАРТ-->
+                
                 <li>
-                    <a class="mi-btn-nav" href="{{ route('login') }}" role="button"><i class="fas fa-sign-in-alt"></i>
+                    <a class="mi-btn-nav" href="#" role="button"><i class="fas fa-sign-in-alt"></i>
                     Вход</a>
                 </li>
 
                 <li>
-                    <a class="mi-btn-nav" href="{{ route('register') }}" role="button"><i class="fas fa-user-plus"></i>
+                    <a class="mi-btn-nav" href="#" role="button"><i class="fas fa-user-plus"></i>
                     Регистрация</a>
                 </li>
+
                 <!-- Когато не е логнат КРАЙ-->
 
                 <li>
@@ -152,70 +156,87 @@
         </header>
         <!-- Тук приключва перфектният хедър -->
 
-        <main id="main" class="flex1">
+        <main class="mi-main">
             <!-- Ей тука пишеш нужното за тази страница -->
             Съдаржание...
             <!-- Тук приключва писането по страницата -->
         </main>
 
         <!-- Тук започва перфектният футър -->
-        <footer id="footer">
-            <div class="col" id="firstBox">
+        <footer class="mi-footer mi-columns-4-for-desktop mi-columns-2-for-notebook mi-columns-2-for-tablet mi-column-for-mobile mi-gap-1-for-desktop mi-gap-2-for-tablet mi-gap-0-for-mobile">
+
+            <ul>
                 <h3>Контакти</h3>
-                <p><i class="fas fa-mobile-alt m-2"></i><a href="tel:+359878738040">+359878738040</a></p>
-                <p><i class="fas fa-envelope-square m-2"></i><a href="mailto:info@creativni.com">Email: info@creativni.com</a></i></p>
-                <p><i class="fas fa-envelope-square m-2"></i><a href="mailto:team@creativni.com">Email: team@creativni.com</a></i></p>
-                <ul id="thirthCol">
-                    <li>
-                        <p><a href="https://www.facebook.com/groups/691947731220270/?tn-str=*F" target="_blanc"><img border=" 0" alt="facebook" src="images/Green_Facebook.png" width="45" height="45"></a>
-                        </p>
-                    </li>
-                    <li>
-                        <p><a href="https://www.pinterest.com/eb0cbd3ecf81451962746acda9cad4/" target="_blanc"><img border=" 0" alt="Pinterest" src="images/Green_Pinterest.png" width="45" height="45"></a>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p><a href="https://twitter.com/Creativni1?lang=en" target="_blanc"><img border=" 0" alt="tweeter" src="images/Twitter_Green.png" width="45" height="45"></a></p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col" id="secondBox">
-                <ul>
-                    <li> <a href="#">Квилинг</a></li>
-                    <li> <a href="#">Плетени на Една кука</a></li>
-                    <li> <a href="#">Плетени на Две куки</a></li>
-                    <li><a href="#">Живопис</a></li>
-                    <li><a href="#">Декупаж</a></li>
-                    <li> <a href="#">Щамповани</a></li>
-                    <li><a href="#">Дигитални</a></li>
-                    <li><a href="#">Други</a></li>
-                </ul>
-            </div>
-
-            <div class="col" id="thirdBox">
-                <p><a href="#">Нашата мисия</a></p>
-                <p><a href="#">Нашият екип</a></p>
-
-                <p><a href="#">Общи правила за ползване на сайта</a></p>
-            </div>
-
-            <div class="col" id="form">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Вашият Имейл</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                <p>
+                    <i class="fas fa-mobile-alt"></i> <a href="tel:+359878738040">+359878738040</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope-square"></i> <a href="mailto:info@creativni.com">Email: info@creativni.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope-square"></i> <a href="mailto:team@creativni.com">Email: team@creativni.com</a>
+                </p>
+                <li>
+                    <div class="mi-columns-3">
+                        <a href="https://www.facebook.com/groups/691947731220270/?tn-str=*F" target="_blanc"><img class="mi-icon" border="0" alt="facebook" src="images/Green_Facebook.png"></a>
+                        <a href="https://www.pinterest.com/eb0cbd3ecf81451962746acda9cad4/" target="_blanc"><img class="mi-icon" border="0" alt="Pinterest" src="images/Green_Pinterest.png"></a>
+                        <a href="https://twitter.com/Creativni1?lang=en" target="_blanc"><img class="mi-icon" border="0" alt="tweeter" src="images/Twitter_Green.png"></a>
                     </div>
+                </li>
+            </ul>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Вашето съобщение</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <input class="mi-btn-nav" type="submit" value="Изпратете">
-                    </div>
-                </form>
-            </div>
+            <ul>
+                <li>
+                    <a href="#">Квилинг</a>
+                </li>
+                <li>
+                    <a href="#">Плетени на Една кука</a>
+                </li>
+                <li>
+                    <a href="#">Плетени на Две куки</a>
+                </li>
+                <li>
+                    <a href="#">Живопис</a>
+                </li>
+                <li>
+                    <a href="#">Декупаж</a>
+                </li>
+                <li>
+                    <a href="#">Щамповани</a>
+                </li>
+                <li>
+                    <a href="#">Дигитални</a>
+                </li>
+                <li>
+                    <a href="#">Други</a>
+                </li>
+            </ul>
+
+            <ul>
+                <p>
+                    <a href="#">Нашата мисия</a>
+                </p>
+                <p>
+                    <a href="#">Нашият екип</a>
+                </p>
+                <p>
+                    <a href="#">Общи правила за ползване на сайта</a>
+                </p>
+            </ul>
+
+            <ul>
+                <li>
+                    <form>
+                        <label for="footer-form-email-field">Вашият Имейл</label>
+                        <input type="email" id="footer-form-email-field" placeholder="моят@имейл.ком">
+
+                        <label for="footer-form-body-field">Вашето съобщение</label>
+                        <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                        <button class="mi-btn-footer" href="#">Изпратете</button>
+                    </form>
+                </li>
+            </ul>
         </footer>
         <!-- Тук приключва перфектният футър -->
 
@@ -223,12 +244,9 @@
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Тук реферираш нужните javascript за тази страница, ако изобщо има нужда. Замени "името_на_скрипта" с името на новосъздаденият от теб скрипт. Ako са повече скриптове, добавяй ги пак тука. -->
     <script src="./js/името_на_скрипта.js"></script>

@@ -17,6 +17,7 @@
   --header-mobile-background-image: url(../../images/Butterfly-DarkGreen.png);
   --main-background-image: url(../../images/Background-new6.jpg);
   --btn-nav-max-height: 3.2vw;
+  --footer-gap: 3rem;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
@@ -33,55 +34,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: var(--rem);
 }
-body h2 {
-  font-size: 1.125rem;/*18px*/
+
+li {
+  list-style: none;
 }
 
-body h3 {
-  font-size: 1rem;
-}
-
-body p,
-body p.lead,
-body h4,
-body h5 {
-  font-size: 1rem;
-}
-
-body a {
-  color: var(--success-color);
-}
-
-body a:hover {
-  color: var(--success-color);
-  background-color: var(--white-color);
-  border-color: var(--primary-color);
-}
-
-body p {
-  font-size: 0.9rem;
-}
-
-body #background {
-  width: 1920px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-  z-index: -100;
-}
-
-.flex1 {
-  flex: 1;
-}
-
-.flexable-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-body #main {
+body .mi-main {
   background-image: var(--main-background-image);
 }
 
