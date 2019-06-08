@@ -20,4 +20,39 @@
   --main-background-image: url(/*../../images/DarkGreenBackground1520-2.jpg*/);
   --btn-nav-max-height: 3.2vw;
   --footer-gap: 3rem;
+
+  /* buttons */
+  --btn-primary-text-color: #ffffff;
+  --btn-primary-background-color: #092514;
+  --btn-primary-hover-background-color: #7EBD3F;
+  --btn-primary-border-color: transparent;
+  --btn-primary-hover-border-color: #092514;
+
+  --btn-success-text-color: #ffffff;
+  --btn-success-background-color: #6dbf1c;
+  --btn-success-hover-background-color: #A2F352;
+  --btn-success-border-color: transparent;
+  --btn-success-hover-border-color: #6dbf1c;
+
+  --btn-warning-text-color: #ffffff;
+  --btn-warning-background-color: #FF8607;
+  --btn-warning-hover-background-color: #FEB22E;
+  --btn-warning-border-color: transparent;
+  --btn-warning-hover-border-color: #FF8607;
+
+  --btn-danger-text-color: #ffffff;
+  --btn-danger-background-color: #FF0048;
+  --btn-danger-hover-background-color: #D11159;
+  --btn-danger-border-color: transparent;
+  --btn-danger-hover-border-color: #FF0048;
+
+  --btn-info-text-color: #ffffff;
+  --btn-info-background-color: #00D6C7;
+  --btn-info-hover-background-color: #7AEFE7;
+  --btn-info-border-color: transparent;
+  --btn-info-hover-border-color: #00D6C7;
+
+  --btn-link-text-color: #092514;
+  --btn-link-background-color: transparent;
+  /* buttons */
 }

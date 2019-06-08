@@ -375,10 +375,10 @@ fieldset:disabled a.mi-btn-footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  border-color: var(--primary-hover-color);
-  border: 1px solid transparent;
+  color: var(--btn-primary-text-color);
+  background-color: var(--btn-primary-background-color);
+  border-color: var(--btn-primary-hover-background-color);
+  border: 1px solid var(--btn-primary-background-color);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -388,9 +388,9 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-primary:hover {
   text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--primary-hover-color);
-  border-color: var(--primary-color);
+  color: var(--btn-primary-text-color);
+  background-color: var(--btn-primary-hover-background-color);
+  border-color: var(--btn-primary-hover-border-color);
 }
 
 .mi-btn-primary:focus {
@@ -403,16 +403,6 @@ fieldset:disabled a.mi-btn-footer {
   color: var(--white-color);
   background-color: var(--gray-color);
   border-color: var(--white-color);
-}
-
-.mi-btn-primary:not(:disabled):active {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  border-color: var(--primary-hover-color);
-}
-
-.mi-btn-primary:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
@@ -434,9 +424,9 @@ fieldset:disabled a.mi-btn-footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: var(--white-color);
-  background-color: var(--success-color);
-  border-color: var(--success-hover-color);
+  color: var(--btn-success-text-color);
+  background-color: var(--btn-success-background-color);
+  border-color: var(--btn-success-border-color);
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -447,9 +437,9 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-success:hover {
   text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--success-hover-color);
-  border-color: var(--success-color);
+  color: var(--btn-success-text-color);
+  background-color: var(--btn-success-hover-background-color);
+  border-color: var(--btn-success-hover-border-color);
 }
 
 .mi-btn-success:focus {
@@ -460,16 +450,6 @@ fieldset:disabled a.mi-btn-footer {
   color: var(--white-color);
   background-color: var(--gray-color);
   border-color: var(--white-color);
-}
-
-.mi-btn-success:not(:disabled):active {
-  color: var(--white-color);
-  background-color: var(--success-color);
-  border-color: var(--success-hover-color);
-}
-
-.mi-btn-success:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
@@ -491,9 +471,9 @@ fieldset:disabled a.mi-btn-footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: var(--white-color);
-  background-color: var(--warning-color);
-  border-color: var(--white-warning-color);
+  color: var(--btn-warning-text-color);
+  background-color: var(--btn-warning-background-color);
+  border-color: var(--btn-warning-border-color);
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -504,9 +484,9 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-warning:hover {
   text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--warning-hover-color);
-  border-color: var(--warning-color);
+  color: var(--btn-warning-text-color);
+  background-color: var(--btn-warning-hover-background-color);
+  border-color: var(--btn-warning-hover-border-color);
 }
 
 .mi-btn-warning:focus {
@@ -517,16 +497,6 @@ fieldset:disabled a.mi-btn-footer {
   color: var(--white-color);
   background-color: var(--gray-color);
   border-color: var(--white-color);
-}
-
-.mi-btn-warning:not(:disabled):active {
-  color: var(--white-color);
-  background-color: var(--warning-color);
-  border-color: var(--white-warning-color);
-}
-
-.mi-btn-warning:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
@@ -548,9 +518,9 @@ fieldset:disabled a.mi-btn-footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: var(--white-color);
-  background-color: var(--danger-color);
-  border-color: var(--danger-hover-color);
+  color: var(--btn-danger-text-color);
+  background-color: var(--btn-danger-background-color);
+  border-color: var(--btn-danger-border-color);
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -561,9 +531,9 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-danger:hover {
   text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--danger-hover-color);
-  border-color: var(--danger-color);
+  color: var(--btn-danger-text-color);
+  background-color: var(--btn-danger-hover-background-color);
+  border-color: var(--btn-danger-hover-border-color);
 }
 
 .mi-btn-danger:focus {
@@ -574,16 +544,6 @@ fieldset:disabled a.mi-btn-footer {
   color: var(--white-color);
   background-color: var(--gray-color);
   border-color: var(--white-color);
-}
-
-.mi-btn-danger:not(:disabled):active {
-  color: var(--white-color);
-  background-color: var(--danger-color);
-  border-color: var(--danger-hover-color);
-}
-
-.mi-btn-danger:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
@@ -605,9 +565,9 @@ fieldset:disabled a.mi-btn-footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: var(--white-color);
-  background-color: var(--info-color);
-  border-color: var(--info-hover-color);
+  color: var(--btn-info-text-color);
+  background-color: var(--btn-info-background-color);
+  border-color: var(--btn-info-border-color);
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -618,9 +578,9 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-info:hover {
   text-decoration: none;
-  color: var(--white-color);
-  background-color: var(--info-hover-color);
-  border-color: var(--info-color);
+  color: var(--btn-info-text-color);
+  background-color: var(--btn-info-hover-background-color);
+  border-color: var(--btn-info-hover-border-color);
 }
 
 .mi-btn-info:focus {
@@ -631,16 +591,6 @@ fieldset:disabled a.mi-btn-footer {
   color: var(--white-color);
   background-color: var(--gray-color);
   border-color: var(--white-color);
-}
-
-.mi-btn-info:not(:disabled):active {
-  color: var(--white-color);
-  background-color: var(--info-color);
-  border-color: var(--info-hover-color);
-}
-
-.mi-btn-info:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
@@ -691,16 +641,6 @@ fieldset:disabled a.mi-btn-footer {
   border-color: var(--white-color);
 }
 
-.mi-btn-nav:not(:disabled):active {
-  color: var(--primary-color);
-  background-color: var(--white-color);
-  border-color: var(--primary-color);
-}
-
-.mi-btn-nav:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
-}
-
 @media only screen and (max-width: 991px) {
 
 }
@@ -718,7 +658,7 @@ fieldset:disabled a.mi-btn-footer {
   text-decoration: none;
   display: inline-block;
   font-weight: 400;
-  color: var(--primary-color);
+  color: var(--btn-link-text-color);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -726,31 +666,14 @@ fieldset:disabled a.mi-btn-footer {
   -ms-user-select: none;
   user-select: none;
   border: none;
-  background-color: var(--white-color);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.mi-btn-link {
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 400;
-  color: var(--primary-color);
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: none;
-  background-color: var(--white-color);
+  background-color: var(--btn-link-background-color);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
 }
 
 .mi-btn-link:hover {
+  color: var(--btn-link-text-color);
   text-decoration: underline;
 }
 
