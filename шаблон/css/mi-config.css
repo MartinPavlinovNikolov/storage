@@ -1,6 +1,6 @@
 :root {
   --primary-color: #092514;
-  --primary-hover-color: #004E1F;
+  --primary-hover-color: #7EBD3F;
   --success-color: #6dbf1c;
   --success-hover-color: #A2F352;
   --warning-color: #FF8607;
@@ -10,14 +10,14 @@
   --info-color: #00D6C7;
   --info-hover-color: #7AEFE7;
   --white-color: #ffffff;
-  --gray-color: #ccc;
+  --gray-color: #eee;
   --rem: 16px;
   --nav-height: 3.25rem;
   --header-desktop-background-image: url(../../images/DarkGreenHeader1280.jpg);
   --header-notebook-background-image: url(../../images/DarkGreenHeader990.jpg);
   --header-tablet-background-image: url(../../images/DarkGreenHeader760.jpg);
   --header-mobile-background-image: url(../../images/DarkGreenHeader575.jpg);
-  --main-background-image: url(../../images/DarkGreenBackground1520-2.jpg);
+  --main-background-image: url(/*../../images/DarkGreenBackground1520-2.jpg*/);
   --btn-nav-max-height: 3.2vw;
   --footer-gap: 3rem;
 }

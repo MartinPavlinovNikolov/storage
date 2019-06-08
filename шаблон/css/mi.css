@@ -39,7 +39,6 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
 }
 
 p {
@@ -128,7 +127,6 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -335,12 +333,24 @@ template {
 
 @media only screen and (max-width: 991px) {
 
+  .mi-header {
+    margin-top: calc(0.9 * var(--nav-height));
+  }
+
 }
 @media only screen and (max-width: 768px) {
 
+  .mi-header {
+    margin-top: calc(0.8 * var(--nav-height));
+  }
+
 }
 @media only screen and (max-width: 575px) {
-  
+
+  .mi-header {
+    margin-top: calc(0.7 * var(--nav-height));
+  }
+
 }
 /* хедър елемент */
 
@@ -868,10 +878,13 @@ fieldset:disabled a.mi-btn-footer {
   border-bottom-right-radius: 0;
   width: auto;
   max-height: var(--btn-nav-max-height);
-  height: 2.25rem;
+  height: calc(0.6 * var(--nav-height));
 }
 
 .mi-navbar .mi-search-button-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -886,7 +899,7 @@ fieldset:disabled a.mi-btn-footer {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   max-height: var(--btn-nav-max-height);
-  height: 2.25rem;
+  height: calc(0.6 * var(--nav-height));
   font-size: 1.5vw;
   font-weight: 900;
   line-height: 1.5vw;
@@ -940,16 +953,22 @@ fieldset:disabled a.mi-btn-footer {
   width: 100%;
   top: 100%;
   left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
 }
 .mi-navbar .mi-dropdown-nav:focus .mi-dropdown-content-nav {
   display: block;
+  z-index: 200;
 }
 .mi-navbar .mi-dropdown-content-nav a {
   display: block;
   min-height: 2rem;
   text-decoration: none;
   color: var(--primary-color);
-  margin-top: .5rem;
+  line-height: 2rem;
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
 }
 .mi-navbar .mi-dropdown-content-nav a:hover {
   color: var(--success-color);
@@ -959,17 +978,25 @@ fieldset:disabled a.mi-btn-footer {
 @media only screen and (max-width: 991px) {
   
   .mi-navbar {
-    max-height: 2.6rem;
+    max-height: calc(0.9 * var(--nav-height));
   }
 
   .mi-navbar .mi-search-input-nav {
-    max-width: 20vw;
+    max-width: 9vw;
+    height: calc(0.55 * var(--nav-height));
+  }
+
+  .mi-navbar .mi-search-button-nav {
+    height: calc(0.55 * var(--nav-height));
   }
 
 }
 
 @media only screen and (max-width: 768px) {
-
+  
+  .mi-navbar {
+    max-height: calc(0.8 * var(--nav-height));
+  }
   .mi-navbar #hamburger {
     display: flex;
     flex-direction: column;
@@ -1055,6 +1082,12 @@ fieldset:disabled a.mi-btn-footer {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+
+  .mi-navbar .mi-dropdown-content-nav a:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+
   .mi-navbar ul li form {
     display: flex;
     flex-wrap: wrap;
@@ -1115,27 +1148,36 @@ fieldset:disabled a.mi-btn-footer {
     background-color: var(--primary-hover-color);
     border-color: var(--success-color);
   }
-  .mi-navbar .mi-dropdown-content-nav a:hover {
-    background-color: var(--primary-hover-color);
-  }
 
   .mi-navbar .mi-dropdown-content-nav {
     border-color: var(--success-color);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .mi-navbar .mi-dropdown-content-nav a {
     display: block;
     min-height: 2rem;
+    line-height: 1rem;
     text-decoration: none;
     color: var(--white-color);
     margin: 0;
     padding-top: .5rem;
+    border: none;
+  }
+
+  .mi-navbar .mi-dropdown-content-nav a:hover {
+    background-color: var(--primary-hover-color);
   }
 
 }
 
 @media only screen and (max-width: 575px) {
-
+  
+  .mi-navbar {
+    max-height: calc(0.7 * var(--nav-height));
+  }
 
 }
 /* навигационна лента */
@@ -1166,21 +1208,24 @@ fieldset:disabled a.mi-btn-footer {
 
 @media only screen and (max-width: 991px) {
 
+  .mi-footer .mi-btn-footer {
+    max-height: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
-  .mi-footer .mi-btn-footer {
-    width: 100%;
-  }
 }
 
 @media only screen and (max-width: 575px) {
 
   .mi-footer .mi-btn-footer {
-    max-height: 2rem;
-    height: 2rem;
-    font-size: 1rem;
+    width: 100%;
   }
+
 }
 /* футър */
 
@@ -1214,6 +1259,400 @@ fieldset:disabled a.mi-btn-footer {
   }
 }
 /* иконки */
+
+/* панели */
+.mi-panel {
+  display: inline-block;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  border-color: var(--primary-color);
+  margin: 0 auto;
+}
+
+.mi-panel > h2 {/* заглавие на панела */
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+  line-height: 1.5rem;
+}
+/* панели */
+
+/* широчини в проценти */
+.mi-width-5 {
+  width: 5%;
+}
+.mi-width-10 {
+  width: 10%;
+}
+.mi-width-15 {
+  width: 15%;
+}
+.mi-width-20 {
+  width: 20%;
+}
+.mi-width-25 {
+  width: 25%;
+}
+.mi-width-30 {
+  width: 30%;
+}
+.mi-width-35 {
+  width: 35%;
+}
+.mi-width-40 {
+  width: 40%;
+}
+.mi-width-45 {
+  width: 45%;
+}
+.mi-width-50 {
+  width: 50%;
+}
+.mi-width-55 {
+  width: 55%;
+}
+.mi-width-60 {
+  width: 60%;
+}
+.mi-width-65 {
+  width: 65%;
+}
+.mi-width-70 {
+  width: 70%;
+}
+.mi-width-75 {
+  width: 75%;
+}
+.mi-width-80 {
+  width: 80%;
+}
+.mi-width-85 {
+  width: 85%;
+}
+.mi-width-90 {
+  width: 90%;
+}
+.mi-width-95 {
+  width: 95%;
+}
+.mi-width-100 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .mi-width-5-for-desktop {
+    width: 5%;
+  }
+  .mi-width-10-for-desktop {
+    width: 10%;
+  }
+  .mi-width-15-for-desktop {
+    width: 15%;
+  }
+  .mi-width-20-for-desktop {
+    width: 20%;
+  }
+  .mi-width-25-for-desktop {
+    width: 25%;
+  }
+  .mi-width-30-for-desktop {
+    width: 30%;
+  }
+  .mi-width-35-for-desktop {
+    width: 35%;
+  }
+  .mi-width-40-for-desktop {
+    width: 40%;
+  }
+  .mi-width-45-for-desktop {
+    width: 45%;
+  }
+  .mi-width-50-for-desktop {
+    width: 50%;
+  }
+  .mi-width-55-for-desktop {
+    width: 55%;
+  }
+  .mi-width-60-for-desktop {
+    width: 60%;
+  }
+  .mi-width-65-for-desktop {
+    width: 65%;
+  }
+  .mi-width-70-for-desktop {
+    width: 70%;
+  }
+  .mi-width-75-for-desktop {
+    width: 75%;
+  }
+  .mi-width-80-for-desktop {
+    width: 80%;
+  }
+  .mi-width-85-for-desktop {
+    width: 85%;
+  }
+  .mi-width-90-for-desktop {
+    width: 90%;
+  }
+  .mi-width-95-for-desktop {
+    width: 95%;
+  }
+  .mi-width-100-for-desktop {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mi-width-5-for-notebook {
+    width: 5%;
+  }
+  .mi-width-10-for-notebook {
+    width: 10%;
+  }
+  .mi-width-15-for-notebook {
+    width: 15%;
+  }
+  .mi-width-20-for-notebook {
+    width: 20%;
+  }
+  .mi-width-25-for-notebook {
+    width: 25%;
+  }
+  .mi-width-30-for-notebook {
+    width: 30%;
+  }
+  .mi-width-35-for-notebook {
+    width: 35%;
+  }
+  .mi-width-40-for-notebook {
+    width: 40%;
+  }
+  .mi-width-45-for-notebook {
+    width: 45%;
+  }
+  .mi-width-50-for-notebook {
+    width: 50%;
+  }
+  .mi-width-55-for-notebook {
+    width: 55%;
+  }
+  .mi-width-60-for-notebook {
+    width: 60%;
+  }
+  .mi-width-65-for-notebook {
+    width: 65%;
+  }
+  .mi-width-70-for-notebook {
+    width: 70%;
+  }
+  .mi-width-75-for-notebook {
+    width: 75%;
+  }
+  .mi-width-80-for-notebook {
+    width: 80%;
+  }
+  .mi-width-85-for-notebook {
+    width: 85%;
+  }
+  .mi-width-90-for-notebook {
+    width: 90%;
+  }
+  .mi-width-95-for-notebook {
+    width: 95%;
+  }
+  .mi-width-100-for-notebook {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mi-width-5-for-tablet {
+    width: 5%;
+  }
+  .mi-width-10-for-tablet {
+    width: 10%;
+  }
+  .mi-width-15-for-tablet {
+    width: 15%;
+  }
+  .mi-width-20-for-tablet {
+    width: 20%;
+  }
+  .mi-width-25-for-tablet {
+    width: 25%;
+  }
+  .mi-width-30-for-tablet {
+    width: 30%;
+  }
+  .mi-width-35-for-tablet {
+    width: 35%;
+  }
+  .mi-width-40-for-tablet {
+    width: 40%;
+  }
+  .mi-width-45-for-tablet {
+    width: 45%;
+  }
+  .mi-width-50-for-tablet {
+    width: 50%;
+  }
+  .mi-width-55-for-tablet {
+    width: 55%;
+  }
+  .mi-width-60-for-tablet {
+    width: 60%;
+  }
+  .mi-width-65-for-tablet {
+    width: 65%;
+  }
+  .mi-width-70-for-tablet {
+    width: 70%;
+  }
+  .mi-width-75-for-tablet {
+    width: 75%;
+  }
+  .mi-width-80-for-tablet {
+    width: 80%;
+  }
+  .mi-width-85-for-tablet {
+    width: 85%;
+  }
+  .mi-width-90-for-tablet {
+    width: 90%;
+  }
+  .mi-width-95-for-tablet {
+    width: 95%;
+  }
+  .mi-width-100-for-tablet {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .mi-width-5-for-mobile {
+    width: 5%;
+  }
+  .mi-width-10-for-mobile {
+    width: 10%;
+  }
+  .mi-width-15-for-mobile {
+    width: 15%;
+  }
+  .mi-width-20-for-mobile {
+    width: 20%;
+  }
+  .mi-width-25-for-mobile {
+    width: 25%;
+  }
+  .mi-width-30-for-mobile {
+    width: 30%;
+  }
+  .mi-width-35-for-mobile {
+    width: 35%;
+  }
+  .mi-width-40-for-mobile {
+    width: 40%;
+  }
+  .mi-width-45-for-mobile {
+    width: 45%;
+  }
+  .mi-width-50-for-mobile {
+    width: 50%;
+  }
+  .mi-width-55-for-mobile {
+    width: 55%;
+  }
+  .mi-width-60-for-mobile {
+    width: 60%;
+  }
+  .mi-width-65-for-mobile {
+    width: 65%;
+  }
+  .mi-width-70-for-mobile {
+    width: 70%;
+  }
+  .mi-width-75-for-mobile {
+    width: 75%;
+  }
+  .mi-width-80-for-mobile {
+    width: 80%;
+  }
+  .mi-width-85-for-mobile {
+    width: 85%;
+  }
+  .mi-width-90-for-mobile {
+    width: 90%;
+  }
+  .mi-width-95-for-mobile {
+    width: 95%;
+  }
+  .mi-width-100-for-mobile {
+    width: 100%;
+  }
+}
+/* широчини в проценти */
+
+/* подвавняване */
+.mi-content-center {
+  text-align: center;
+}
+.mi-content-left {
+  text-align: left;
+}
+.mi-content-right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 575px) {
+  
+}
+/* подвавняване */
+
+/* изображения */
+.mi-img {
+  height: auto;
+  margin: 0 auto;
+  padding: 4px;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+}
+
+
+.mi-grid-img  {
+  margin: 0 auto .5rem;
+  width: 24.2%;
+  height: 20vw;
+  display: flex;
+  align-items: middle;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  background-color: var(--gray-color);
+  border-radius: 5px;
+}
+.mi-grid-img > img {
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 575px) {
+  
+}
+
+/* изображения */
 
 /* полезни */
 .mi-layout {
@@ -1327,6 +1766,72 @@ fieldset:disabled a.mi-btn-footer {
 }
 @media only screen and (max-width: 575px) {
   
+}
+
+.mi-items-center {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.mi-items-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.mi-items-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.mi-items-around {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.mi-items-between {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.mi-items-evenly {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1713,3 +2218,132 @@ fieldset:disabled a.mi-btn-footer {
   
 }
 /* полезни */
+
+/* въртележка */
+.mi-automatic-slider {
+  display: flex;
+  align-items: flex-end;
+  overflow-x: hidden;
+  border: 2px solid var(--gray-color);
+  border-radius: 15px;
+  background-color: var(--white-color);
+  padding: 2rem;
+}
+
+.mi-automatic-slider-item {
+  width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+  animation: slide 12s ease-in-out forwards infinite;
+}
+
+@keyframes slide {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  25%, 45% {
+    transform: translateX(-100%);
+  }
+  50%, 70% {
+    transform: translateX(-200%);
+  }
+  75%, 95% {
+    transform: translateX(-100%);
+  }
+}
+/* въртележка */
+
+
+/* карти-произведения */
+.mi-creativity-card {
+  width: 15.6vw;
+  height: auto;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px #0B173C;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.mi-creativity-card .mi-creativity-card-image {
+  width: 100%;
+  height: 12vw;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+  background-color: var(--gray-color);
+}
+.mi-creativity-card .mi-creativity-card-type {
+  width: 90%;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mi-creativity-card .mi-creativity-card-author {
+  width: 90%;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mi-creativity-card .mi-creativity-card-description {
+  width: 90%;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mi-creativity-card .mi-btn-primary {
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .mi-creativity-card .mi-creativity-card-type {
+    font-size: .7rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+  }
+  .mi-creativity-card .mi-creativity-card-author {
+    font-size: .8rem;
+    margin-top: 0;
+  }
+  .mi-creativity-card .mi-creativity-card-description {
+    font-size: .5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mi-creativity-card .mi-btn-primary {
+    margin-top: 5vw;
+    margin-bottom: 10px;
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mi-creativity-card {
+    width: 23vw;
+  }
+  .mi-creativity-card .mi-creativity-card-image {
+    height: 14vw;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .mi-creativity-card {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mi-creativity-card .mi-creativity-card-image {
+    height: 60vw;
+  }
+  .mi-creativity-card .mi-creativity-card-type {
+    margin-top: .4rem;
+  }
+  .mi-creativity-card .mi-btn-primary {
+    margin-top: 3vw;
+    font-size: 2.5vw;
+  }
+}
+/* карти-произведения */
