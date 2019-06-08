@@ -2227,7 +2227,7 @@ fieldset:disabled a.mi-btn-footer {
   border: 2px solid var(--gray-color);
   border-radius: 15px;
   background-color: var(--white-color);
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .mi-automatic-slider-item {
@@ -2235,6 +2235,9 @@ fieldset:disabled a.mi-btn-footer {
   margin: 0 auto;
   flex-shrink: 0;
   animation: slide 12s ease-in-out forwards infinite;
+}
+.mi-automatic-slider-item img {
+  width: 40%;
 }
 
 @keyframes slide {
