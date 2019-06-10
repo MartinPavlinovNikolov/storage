@@ -212,48 +212,51 @@
     margin-top: 1rem;
   }
   #area-1 > h2 {
-    font-size: .7rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   #area-2 {
     margin-top: 1rem;
   }
   #area-3 {
     margin-top: 1rem;
-    font-size: .6rem;
+    font-size: .9rem;
   }
   #area-4 {
     margin-top: 1rem;
   }
   #area-4 > h2 {
-    font-size: .6rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   #area-5 {
     margin-top: 1rem;
-    font-size: .7rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
   #area-6 {
-    margin-top: .7rem;
-    font-size: .7rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
   #area-7 {
     margin-top: 1rem;
-    font-size: .7rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
   #area-7 .mi-btn-primary {
-    font-size: .5rem;
+    font-size: 4.5vw;
   }
   #area-8 {
     margin-top: 2rem;
-    font-size: .8rem;
+    font-size: 1rem;
   }
   #area-9 {
     margin-top: 1rem;
   }
 
   #area-10 p {
-    font-size: .6rem;
+    font-size: .8rem;
   }
 
   #area-11 {
@@ -264,7 +267,7 @@
     margin-top: 1rem;
   }
   #area-12 > h2 {
-    font-size: .8rem;
+    font-size: 1rem;
   }
   #area-12 > div {
     margin-top: 1rem;
@@ -276,7 +279,7 @@
 
   #area-14 {
     margin-top: 2rem;
-    font-size: .7rem;
+    font-size: 1rem;
     padding-bottom: 0;
   }
 
