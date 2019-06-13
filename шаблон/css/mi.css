@@ -388,7 +388,7 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-primary:hover {
   text-decoration: none;
-  color: var(--btn-primary-text-color);
+  color: var(--btn-primary-hover-text-color);
   background-color: var(--btn-primary-hover-background-color);
   border-color: var(--btn-primary-hover-border-color);
 }
@@ -437,7 +437,7 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-success:hover {
   text-decoration: none;
-  color: var(--btn-success-text-color);
+  color: var(--btn-success-hover-text-color);
   background-color: var(--btn-success-hover-background-color);
   border-color: var(--btn-success-hover-border-color);
 }
@@ -484,7 +484,7 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-warning:hover {
   text-decoration: none;
-  color: var(--btn-warning-text-color);
+  color: var(--btn-warning-hover-text-color);
   background-color: var(--btn-warning-hover-background-color);
   border-color: var(--btn-warning-hover-border-color);
 }
@@ -531,7 +531,7 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-danger:hover {
   text-decoration: none;
-  color: var(--btn-danger-text-color);
+  color: var(--btn-danger-hover-text-color);
   background-color: var(--btn-danger-hover-background-color);
   border-color: var(--btn-danger-hover-border-color);
 }
@@ -578,7 +578,7 @@ fieldset:disabled a.mi-btn-footer {
 
 .mi-btn-info:hover {
   text-decoration: none;
-  color: var(--btn-info-text-color);
+  color: var(--btn-info-hover-text-color);
   background-color: var(--btn-info-hover-background-color);
   border-color: var(--btn-info-hover-border-color);
 }
@@ -673,7 +673,7 @@ fieldset:disabled a.mi-btn-footer {
 }
 
 .mi-btn-link:hover {
-  color: var(--btn-link-text-color);
+  color: var(--btn-link-hover-text-color);
   text-decoration: underline;
 }
 
