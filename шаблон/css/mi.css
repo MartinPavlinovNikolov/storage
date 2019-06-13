@@ -2196,95 +2196,264 @@ fieldset:disabled a.mi-btn-footer {
 
 
 /* карти-произведения */
-.mi-creativity-card {
+.mi-creativity-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  text-align: center;
+}
+.mi-creativity-cards .mi-creativity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 15.6vw;
-  height: auto;
   border: 1px solid var(--gray-color);
   border-radius: 5px;
   box-shadow: 2px 2px 5px 2px #0B173C;
-  text-align: center;
   margin-bottom: 2rem;
 }
-.mi-creativity-card .mi-creativity-card-image {
+.mi-creativity-cards .mi-creativity-card > div {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 4% 8% 0;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-images {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 12vw;
+  overflow: hidden;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-images .mi-creativity-card-images-counter {
+  position: absolute;
+  display: block;
+  font-size: .7vw;
+  top: 4%;
+  left: 3%;
+  width: 20%;
+  color: var(--primary-color);
+  background: -webkit-linear-gradient(var(--white-color), var(--gray-color));
+  padding: 0 3%;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  z-index: 110;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 12vw;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   object-fit: cover;
+  opacity: 1;
+  z-index: -1;
   background-color: var(--gray-color);
+  animation: creativity_images_animation 24s infinite;
 }
-.mi-creativity-card .mi-creativity-card-type {
-  width: 90%;
-  font-size: 1rem;
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image-single {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vw;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: var(--gray-color);
+  object-fit: cover;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(1) {
+  animation-delay: 0s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(2) {
+  animation-delay: 8s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(3) {
+  animation-delay: 16s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(4) {
+  animation-delay: 24s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(5) {
+  animation-delay: 32s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(6) {
+  animation-delay: 40s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(7) {
+  animation-delay: 48s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(8) {
+  animation-delay: 56s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(9) {
+  animation-delay: 64s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(3):first-child,
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(3):first-child ~ .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image {
+  animation-duration: 24s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(6):first-child,
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(6):first-child ~ .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image {
+  animation-duration: 48s;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(9):first-child,
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-image:nth-child(9):first-child ~ .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image {
+  animation-duration: 72s;
+}
+@keyframes creativity_images_animation {
+  0% { opacity: 0; z-index: 100; }
+  15% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; z-index: -1; }
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-author {
+  font-size: 1.1vw;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  width: 70%;
+}
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-created {
+  font-size: .8vw;
   font-weight: 400;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  width: 30%;
 }
-.mi-creativity-card .mi-creativity-card-author {
-  width: 90%;
-  font-size: 1rem;
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-type {
+  width: 100%;
+  font-size: 1vw;
   font-weight: 400;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  margin: 0;
+  padding: 4% 8% 0;
 }
-.mi-creativity-card .mi-creativity-card-description {
-  width: 90%;
-  font-size: .8rem;
-  font-weight: 400;
-  margin-left: auto;
-  margin-right: auto;
+.mi-creativity-cards .mi-creativity-card hr {
+  width: 85%;
+  color: var(--gray-color);
+  margin: 4% 0 0;
+  padding: 0;
 }
-.mi-creativity-card .mi-btn-primary {
-  margin-top: 1rem;
-  margin-bottom: 1.3rem;
+.mi-creativity-cards .mi-creativity-card .mi-creativity-card-description {
+  width: 100%;
+  font-size: 1.1vw;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  padding: 4% 8% 0;
+}
+.mi-creativity-cards .mi-creativity-card .mi-stars {
+  width: 60%;
+  text-align: left;
+  font-size: 1vw;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+.mi-creativity-cards .mi-creativity-card .mi-stars > i {
+  background: -webkit-linear-gradient(#d9e60e, #ffa009);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px orange;
+}
+.mi-creativity-cards .mi-creativity-card .mi-rateing-people-number {
+  width: 40%;
+  text-align: right;
+  font-size: 1vw;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.mi-creativity-cards .mi-creativity-card .mi-btn-primary {
+  width: 85%;
+  font-size: 1vw;
+  margin: 4% 0 8%;
 }
 
 @media only screen and (max-width: 991px) {
-  .mi-creativity-card .mi-creativity-card-type {
-    font-size: .7rem;
-    margin-top: .5rem;
-    margin-bottom: 0;
+
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-images .mi-creativity-card-images-counter {
+    font-size: .9vw;
   }
-  .mi-creativity-card .mi-creativity-card-author {
-    font-size: .8rem;
-    margin-top: 0;
-  }
-  .mi-creativity-card .mi-creativity-card-description {
-    font-size: .5rem;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .mi-creativity-card .mi-btn-primary {
-    margin-top: 5vw;
-    margin-bottom: 10px;
-    font-size: 1.5vw;
-  }
+
 }
 @media only screen and (max-width: 768px) {
-  .mi-creativity-card {
-    width: 23vw;
+  
+  .mi-creativity-cards .mi-creativity-card {
+    width: 23.5vw;
   }
-  .mi-creativity-card .mi-creativity-card-image {
-    height: 14vw;
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-images, .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image, .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image-single {
+    height: 18.07vw;
   }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-images .mi-creativity-card-images-counter {
+    font-size: 1.2vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-author {
+    font-size: 1.8vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-created {
+    font-size: 1.33vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-type {
+    font-size: 1.65vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-description {
+    font-size: 1.8vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-stars {
+    font-size: 1.65vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-rateing-people-number {
+    font-size: 1.65vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-btn-primary {
+    font-size: 1.65vw;
+  }
+
 }
 @media only screen and (max-width: 575px) {
-  .mi-creativity-card {
+  
+  .mi-creativity-cards .mi-creativity-card {
     width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
   }
-  .mi-creativity-card .mi-creativity-card-image {
-    height: 60vw;
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-images, .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image, .mi-creativity-cards .mi-creativity-card .mi-creativity-card-image-single {
+    height: 53.8vw;
   }
-  .mi-creativity-card .mi-creativity-card-type {
-    margin-top: .4rem;
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-images .mi-creativity-card-images-counter {
+    font-size: 3vw;
   }
-  .mi-creativity-card .mi-btn-primary {
-    margin-top: 3vw;
-    font-size: 2.5vw;
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-author {
+    font-size: 3.8vw;
   }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-created {
+    font-size: 2.8vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-type {
+    font-size: 3.5vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-creativity-card-description {
+    font-size: 3.8vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-stars {
+    font-size: 3.5vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-rateing-people-number {
+    font-size: 3.5vw;
+  }
+  .mi-creativity-cards .mi-creativity-card .mi-btn-primary {
+    font-size: 3.5vw;
+  }
+
 }
 /* карти-произведения */
