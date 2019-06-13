@@ -22,17 +22,20 @@
   --footer-gap: 3rem;
 
   /* buttons */
-  --btn-primary-text-color: #ffffff;
+  --btn-primary-text-color: #7EBD3F;
   --btn-primary-background-color: #092514;
   --btn-primary-hover-background-color: #7EBD3F;
   --btn-primary-border-color: transparent;
   --btn-primary-hover-border-color: #092514;
+  --btn-primary-hover-text-color: #092514;
+
 
   --btn-success-text-color: #ffffff;
   --btn-success-background-color: #6dbf1c;
   --btn-success-hover-background-color: #A2F352;
   --btn-success-border-color: transparent;
   --btn-success-hover-border-color: #6dbf1c;
+  --btn-success-hover-text-color:  #092514;
 
   --btn-warning-text-color: #ffffff;
   --btn-warning-background-color: #FF8607;
